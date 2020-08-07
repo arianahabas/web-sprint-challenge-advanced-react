@@ -29,15 +29,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+  Stateful components have a state that gets initialized in the constructor. Secondly, if you're using a constructor, you need to call super().
 
 2. Describe the different phases of the component lifecycle.
+  The three phases are: Mounting, Updating, and Unmounting.
+    -Mounting means putting elements into the DOM
+    -Updating is whenever there is a change in the component's state or props.
+    -Unmounting is when a component is removed from the DOM, or unmounting as React likes to call it.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+  - constructor(): Called first and only once when the page loads, Used to set initial state
+  - render(): This is the only required method in a class component.Called every time React updates and commits to the DOM. Used for writing JSX for components
+  - componentDidMount(): Called once when component is constructed and gets added to the DOM (right after render). Could be used to fetch data and have it displayed right after rendering is done
 
 4. Define stateful logic.
+  Stateful logic is any code that uses state, but in the case of hooks I would define it as a behaviour created with the use of one or more hooks. It's like a perk that you're adding to a component.
 
 5. Describe how to test a React component with React Testing Library.
-
+  import {render} from '@testing-library/react'
+  {  test("form header renders", () => {
+    render(<CheckoutForm/>)
+    });
+  }
+  
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
